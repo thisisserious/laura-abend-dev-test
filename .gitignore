@@ -1,0 +1,12 @@
+.DS_Store
+.*log
+
+themes/westwerk/node_modules
+.npm-debug.log
+tmp
+
+themes/westwerk/.sass-cache
+*.css.map
+
+upgrade
+uploads
