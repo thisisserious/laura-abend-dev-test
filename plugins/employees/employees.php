@@ -4,7 +4,7 @@ Plugin Name: Employees with AJAX
 Description: Displays employees through the WP-API
 Version:     0.1
 Author:      Laura Abend
-Author URI:  [Your URL]
+Author URI:  https://github.com/thisisserious
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path: /languages

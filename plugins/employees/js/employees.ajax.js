@@ -3,10 +3,13 @@ var index = 0;
 var clicks = 0;
 var jsonURL = 'wp-content/plugins/employees/data/Employees.json';
 
+// doc ready, initial 4 imgs on page load
 (function($) {
   if(clicks === 0) {
     getImages(jsonURL);
   }
+
+  // click event handler
   $('.get-more-employees').on('click', function(event) {
     event.preventDefault();
     clicks++;
@@ -14,6 +17,7 @@ var jsonURL = 'wp-content/plugins/employees/data/Employees.json';
     getImages(jsonURL);
   });
 
+  // AJAX call to get the JSON data
   function getImages(jsonURL) {
     $.ajax({
       dataType: 'json',
@@ -28,6 +32,7 @@ var jsonURL = 'wp-content/plugins/employees/data/Employees.json';
     });
   }
 
+  // loop thru data to determine how many imgs should be showing
   function showImages(data) {
     // console.log('data length:', data.length);
     var numberOfEmployees = data.length;
@@ -61,6 +66,7 @@ var jsonURL = 'wp-content/plugins/employees/data/Employees.json';
       }
     });
 
+    // create & prepend employee Profile to the DOM
     function prependDOM() {
       var fullName = data[index].name.first + ' ' + data[index].name.last;
       var position = data[index].position;
